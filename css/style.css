@@ -1,0 +1,135 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  background-color: hsl(204, 43%, 93%);
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,h2,p{
+  margin: 0;
+}
+
+h1,h2{
+ margin-bottom: 1rem;
+}
+
+h1{
+  color: hsl(179, 62%, 43%);
+  font-size: 1.5rem;
+}
+
+h2{
+  font-size: 1.125rem;
+}
+
+section{
+  padding: 2.5rem;
+}
+
+main{
+  width: 40.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 1.5rem hsla(179, 39%, 19%,0.15);
+}
+
+.subtitle{
+  display: block;
+  color: hsl(71, 73%, 54%);
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.description{
+  grid-column: 1/ span 2;
+  background-color: white;
+}
+
+.description p{
+  color: hsl(218, 22%, 67%);
+}
+
+.subscription{
+  background-color: hsl(179, 62%, 43%);
+}
+
+.price{
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.big{
+  font-size: 1.875rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.cta-sign-up{
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.75rem;
+  text-align: center;
+  display: block;
+  border-radius: 0.3rem;
+  margin-top: 1.75rem;
+  box-shadow: 0 0.75rem 1rem hsla(179, 39%, 19%,0.15);
+  transition: background-color .3s ease;
+}
+
+.cta-sign-up:hover{
+  background-color: hsl(71, 73%, 65%);
+}
+
+.about{
+  background-color: hsl(179,47%,52%);
+}
+
+.about p{
+  font-size: 0.875rem;
+}
+
+@media (max-width: 480px)
+{
+  body{
+    padding: 4rem 2rem;
+    display: block;
+  }
+  h1{
+    font-size: 1.25rem;
+  }
+  .subtitle{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  main{
+    grid-template-columns: unset;
+    width: auto;
+  }
+  .description{
+    grid-column: unset;
+  }
+  section{
+    padding: 1.25rem;
+  }
+}
